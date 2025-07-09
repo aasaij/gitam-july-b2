@@ -1,0 +1,16 @@
+////String functions
+//strlen() --> returns length of the given string
+//strcpy() --> used to assign string constant to string variable
+//strncpy() -->used to assign n number of characters to string variable
+//strcat() --> used to join to strings
+//strncat() --> used to join n numbers of characters 
+//strcmp() --> used to compare two strings
+//	compareTo()
+//		= 0 ==> both strings are equal
+//		> 0 ==> first string is greater than second string
+//		< 0 ==> second string is greater than first string
+//strstr() == used to search a string in a string
+//		return pointer if searchString is found else returns NULL
+//strchr() ==> used to search a character in a string
+//		return pointer if character is found else returns NULL
+ 		

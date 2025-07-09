@@ -1,0 +1,13 @@
+//Dynamic memory allocation
+//stdlib.h
+//
+//malloc()
+//	void* malloc(size_t size);
+//	
+//calloc()
+//	void* calloc(size_t numBlocks, size_t blockSize);
+//	
+//realloc()
+//	void* realloc(void* oldBlock, size_t newSize);
+//free()
+//	void free(void* blockName);
