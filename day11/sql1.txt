@@ -1,0 +1,2189 @@
+
+SQL*Plus: Release 19.0.0.0.0 - Production on Mon Jul 14 10:53:00 2025
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle.  All rights reserved.
+
+Enter user-name: system
+Enter password:
+Last Successful login time: Mon Jul 14 2025 10:15:47 +05:30
+
+Connected to:
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.3.0.0.0
+
+SQL> SELECT * FROM tab;
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_SESSION_EVOLVE$
+TABLE
+
+LOGMNR_GLOBAL$
+TABLE
+
+LOGMNR_GT_TAB_INCLUDE$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_GT_USER_INCLUDE$
+TABLE
+
+LOGMNR_GT_XID_INCLUDE$
+TABLE
+
+LOGMNR_PDB_INFO$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_DID$
+TABLE
+
+LOGMNR_UID$
+TABLE
+
+LOGMNRGGC_GTLO
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRGGC_GTCS
+TABLE
+
+LOGMNRC_DBNAME_UID_MAP
+TABLE
+
+LOGMNR_LOG$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_PROCESSED_LOG$
+TABLE
+
+LOGMNR_SPILL$
+TABLE
+
+LOGMNR_AGE_SPILL$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_RESTART_CKPT_TXINFO$
+TABLE
+
+LOGMNR_ERROR$
+TABLE
+
+LOGMNR_RESTART_CKPT$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_FILTER$
+TABLE
+
+LOGMNR_SESSION_ACTIONS$
+TABLE
+
+LOGMNR_PARAMETER$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_SESSION$
+TABLE
+
+LOGMNR_PROFILE_TABLE_STATS$
+TABLE
+
+LOGMNR_PROFILE_PLSQL_STATS$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRT_MDDL$
+TABLE
+
+REDO_DB
+TABLE
+
+REDO_LOG
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+ROLLING$CONNECTIONS
+TABLE
+
+ROLLING$DATABASES
+TABLE
+
+ROLLING$DIRECTIVES
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+ROLLING$EVENTS
+TABLE
+
+ROLLING$PARAMETERS
+TABLE
+
+ROLLING$PLAN
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+ROLLING$STATISTICS
+TABLE
+
+ROLLING$STATUS
+TABLE
+
+SYSCATALOG
+SYNONYM
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+CATALOG
+SYNONYM
+
+TAB
+SYNONYM
+
+COL
+SYNONYM
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+TABQUOTAS
+SYNONYM
+
+SYSFILES
+SYNONYM
+
+PUBLICSYN
+SYNONYM
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_WORKLOAD
+TABLE
+
+MVIEW$_ADV_BASETABLE
+TABLE
+
+MVIEW$_ADV_SQLDEPEND
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_PRETTY
+TABLE
+
+MVIEW$_ADV_TEMP
+TABLE
+
+MVIEW$_ADV_FILTER
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_LOG
+TABLE
+
+MVIEW$_ADV_FILTERINSTANCE
+TABLE
+
+MVIEW$_ADV_LEVEL
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_ROLLUP
+TABLE
+
+MVIEW$_ADV_AJG
+TABLE
+
+MVIEW$_ADV_FJG
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_GC
+TABLE
+
+MVIEW$_ADV_CLIQUE
+TABLE
+
+MVIEW$_ADV_ELIGIBLE
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_OUTPUT
+TABLE
+
+MVIEW$_ADV_EXCEPTIONS
+TABLE
+
+MVIEW$_ADV_PARAMETERS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_INFO
+TABLE
+
+MVIEW$_ADV_JOURNAL
+TABLE
+
+MVIEW$_ADV_PLAN
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW_WORKLOAD
+VIEW
+
+MVIEW_FILTER
+VIEW
+
+MVIEW_LOG
+VIEW
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW_FILTERINSTANCE
+VIEW
+
+MVIEW_RECOMMENDATIONS
+VIEW
+
+MVIEW_EVALUATIONS
+VIEW
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW_EXCEPTIONS
+VIEW
+
+AQ$_QUEUE_TABLES
+TABLE
+
+AQ$_KEY_SHARD_MAP
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+AQ$_QUEUES
+TABLE
+
+AQ$_SCHEDULES
+TABLE
+
+AQ$_INTERNET_AGENTS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+AQ$_INTERNET_AGENT_PRIVS
+TABLE
+
+OL$
+TABLE
+
+OL$HINTS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+OL$NODES
+TABLE
+
+LOGMNR_DICTSTATE$
+TABLE
+
+LOGMNRC_GTLO
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRC_GTCS
+TABLE
+
+LOGMNRC_SEQ_GG
+TABLE
+
+LOGMNRC_CON_GG
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRC_CONCOL_GG
+TABLE
+
+LOGMNRC_IND_GG
+TABLE
+
+LOGMNRC_INDCOL_GG
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRC_SHARD_TS
+TABLE
+
+LOGMNRC_TSPART
+TABLE
+
+LOGMNRC_TS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRC_GSII
+TABLE
+
+LOGMNRC_GSBA
+TABLE
+
+LOGMNR_SEED$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_DICTIONARY$
+TABLE
+
+LOGMNR_OBJ$
+TABLE
+
+LOGMNR_TAB$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_COL$
+TABLE
+
+LOGMNR_ATTRCOL$
+TABLE
+
+LOGMNR_TS$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_IND$
+TABLE
+
+LOGMNR_USER$
+TABLE
+
+LOGMNR_TABPART$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_TABSUBPART$
+TABLE
+
+LOGMNR_TABCOMPART$
+TABLE
+
+LOGMNR_TYPE$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_COLTYPE$
+TABLE
+
+LOGMNR_ATTRIBUTE$
+TABLE
+
+LOGMNR_LOB$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_CON$
+TABLE
+
+LOGMNR_CONTAINER$
+TABLE
+
+LOGMNR_CDEF$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_CCOL$
+TABLE
+
+LOGMNR_ICOL$
+TABLE
+
+LOGMNR_LOBFRAG$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_INDPART$
+TABLE
+
+LOGMNR_INDSUBPART$
+TABLE
+
+LOGMNR_INDCOMPART$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_LOGMNR_BUILDLOG
+TABLE
+
+LOGMNR_NTAB$
+TABLE
+
+LOGMNR_OPQTYPE$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_SUBCOLTYPE$
+TABLE
+
+LOGMNR_KOPM$
+TABLE
+
+LOGMNR_PROPS$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_ENC$
+TABLE
+
+LOGMNR_REFCON$
+TABLE
+
+LOGMNR_IDNSEQ$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_PARTOBJ$
+TABLE
+
+LOGMNRP_CTAS_PART_MAP
+TABLE
+
+LOGMNR_SHARD_TS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+SCHEDULER_PROGRAM_ARGS
+VIEW
+
+SCHEDULER_JOB_ARGS
+VIEW
+
+SCHEDULER_PROGRAM_ARGS_TBL
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+SCHEDULER_JOB_ARGS_TBL
+TABLE
+
+LOGSTDBY$PARAMETERS
+TABLE
+
+LOGSTDBY$EVENTS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGSTDBY$APPLY_PROGRESS
+TABLE
+
+LOGSTDBY$APPLY_MILESTONE
+TABLE
+
+LOGSTDBY$SCN
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGSTDBY$FLASHBACK_SCN
+TABLE
+
+LOGSTDBY$PLSQL
+TABLE
+
+LOGSTDBY$SKIP_TRANSACTION
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGSTDBY$SKIP
+TABLE
+
+LOGSTDBY$SKIP_SUPPORT
+TABLE
+
+LOGSTDBY$HISTORY
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGSTDBY$EDS_TABLES
+TABLE
+
+COURSE_DETAILS
+TABLE
+
+OLD_STUDENT
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+STUDENT_NEW
+TABLE
+
+STUDENT2
+TABLE
+
+DEPARTMENT1
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+PRODUCT_PRIVS
+VIEW
+
+SQLPLUS_PRODUCT_PROFILE
+TABLE
+
+PRODUCT_USER_PROFILE
+SYNONYM
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+HELP
+TABLE
+
+DEPARTMENT
+TABLE
+
+STUDENT
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+BACKUP_EMPLOYEE
+TABLE
+
+BACKUP_EMPLOYEE1
+TABLE
+
+EMPLOYEE
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+DEPART
+TABLE
+
+GROUP_TABLE
+VIEW
+
+STUDENTNEW
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+EMPLOYEES
+TABLE
+
+STUDENTS
+TABLE
+
+STUDENT_OLD
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+DEPARTMENTS
+TABLE
+
+STUDENT_BACKUP
+TABLE
+
+STUDENTS_COPY
+TABLE
+
+
+168 rows selected.
+
+SQL> SELECT * FROM user_constraints WHERE table_name ='STUDENTS';
+
+no rows selected
+
+SQL> SELECT * FROM user_constraints WHERE table_name ='STUDENT';
+
+OWNER
+--------------------------------------------------------------------------------
+CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+C
+-
+TABLE_NAME
+--------------------------------------------------------------------------------
+SEARCH_CONDITION
+--------------------------------------------------------------------------------
+SEARCH_CONDITION_VC
+--------------------------------------------------------------------------------
+R_OWNER
+--------------------------------------------------------------------------------
+R_CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+DELETE_RU STATUS   DEFERRABLE     DEFERRED  VALIDATED     GENERATED      BAD
+--------- -------- -------------- --------- ------------- -------------- ---
+RELY LAST_CHAN
+---- ---------
+INDEX_OWNER
+--------------------------------------------------------------------------------
+INDEX_NAME
+--------------------------------------------------------------------------------
+INVALID VIEW_RELATED   ORIGIN_CON_ID
+------- -------------- -------------
+SYSTEM
+
+OWNER
+--------------------------------------------------------------------------------
+CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+C
+-
+TABLE_NAME
+--------------------------------------------------------------------------------
+SEARCH_CONDITION
+--------------------------------------------------------------------------------
+SEARCH_CONDITION_VC
+--------------------------------------------------------------------------------
+R_OWNER
+--------------------------------------------------------------------------------
+R_CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+DELETE_RU STATUS   DEFERRABLE     DEFERRED  VALIDATED     GENERATED      BAD
+--------- -------- -------------- --------- ------------- -------------- ---
+RELY LAST_CHAN
+---- ---------
+INDEX_OWNER
+--------------------------------------------------------------------------------
+INDEX_NAME
+--------------------------------------------------------------------------------
+INVALID VIEW_RELATED   ORIGIN_CON_ID
+------- -------------- -------------
+DEPART_FK
+
+OWNER
+--------------------------------------------------------------------------------
+CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+C
+-
+TABLE_NAME
+--------------------------------------------------------------------------------
+SEARCH_CONDITION
+--------------------------------------------------------------------------------
+SEARCH_CONDITION_VC
+--------------------------------------------------------------------------------
+R_OWNER
+--------------------------------------------------------------------------------
+R_CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+DELETE_RU STATUS   DEFERRABLE     DEFERRED  VALIDATED     GENERATED      BAD
+--------- -------- -------------- --------- ------------- -------------- ---
+RELY LAST_CHAN
+---- ---------
+INDEX_OWNER
+--------------------------------------------------------------------------------
+INDEX_NAME
+--------------------------------------------------------------------------------
+INVALID VIEW_RELATED   ORIGIN_CON_ID
+------- -------------- -------------
+R
+
+OWNER
+--------------------------------------------------------------------------------
+CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+C
+-
+TABLE_NAME
+--------------------------------------------------------------------------------
+SEARCH_CONDITION
+--------------------------------------------------------------------------------
+SEARCH_CONDITION_VC
+--------------------------------------------------------------------------------
+R_OWNER
+--------------------------------------------------------------------------------
+R_CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+DELETE_RU STATUS   DEFERRABLE     DEFERRED  VALIDATED     GENERATED      BAD
+--------- -------- -------------- --------- ------------- -------------- ---
+RELY LAST_CHAN
+---- ---------
+INDEX_OWNER
+--------------------------------------------------------------------------------
+INDEX_NAME
+--------------------------------------------------------------------------------
+INVALID VIEW_RELATED   ORIGIN_CON_ID
+------- -------------- -------------
+STUDENT
+
+OWNER
+--------------------------------------------------------------------------------
+CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+C
+-
+TABLE_NAME
+--------------------------------------------------------------------------------
+SEARCH_CONDITION
+--------------------------------------------------------------------------------
+SEARCH_CONDITION_VC
+--------------------------------------------------------------------------------
+R_OWNER
+--------------------------------------------------------------------------------
+R_CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+DELETE_RU STATUS   DEFERRABLE     DEFERRED  VALIDATED     GENERATED      BAD
+--------- -------- -------------- --------- ------------- -------------- ---
+RELY LAST_CHAN
+---- ---------
+INDEX_OWNER
+--------------------------------------------------------------------------------
+INDEX_NAME
+--------------------------------------------------------------------------------
+INVALID VIEW_RELATED   ORIGIN_CON_ID
+------- -------------- -------------
+
+
+OWNER
+--------------------------------------------------------------------------------
+CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+C
+-
+TABLE_NAME
+--------------------------------------------------------------------------------
+SEARCH_CONDITION
+--------------------------------------------------------------------------------
+SEARCH_CONDITION_VC
+--------------------------------------------------------------------------------
+R_OWNER
+--------------------------------------------------------------------------------
+R_CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+DELETE_RU STATUS   DEFERRABLE     DEFERRED  VALIDATED     GENERATED      BAD
+--------- -------- -------------- --------- ------------- -------------- ---
+RELY LAST_CHAN
+---- ---------
+INDEX_OWNER
+--------------------------------------------------------------------------------
+INDEX_NAME
+--------------------------------------------------------------------------------
+INVALID VIEW_RELATED   ORIGIN_CON_ID
+------- -------------- -------------
+
+
+OWNER
+--------------------------------------------------------------------------------
+CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+C
+-
+TABLE_NAME
+--------------------------------------------------------------------------------
+SEARCH_CONDITION
+--------------------------------------------------------------------------------
+SEARCH_CONDITION_VC
+--------------------------------------------------------------------------------
+R_OWNER
+--------------------------------------------------------------------------------
+R_CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+DELETE_RU STATUS   DEFERRABLE     DEFERRED  VALIDATED     GENERATED      BAD
+--------- -------- -------------- --------- ------------- -------------- ---
+RELY LAST_CHAN
+---- ---------
+INDEX_OWNER
+--------------------------------------------------------------------------------
+INDEX_NAME
+--------------------------------------------------------------------------------
+INVALID VIEW_RELATED   ORIGIN_CON_ID
+------- -------------- -------------
+SYSTEM
+
+OWNER
+--------------------------------------------------------------------------------
+CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+C
+-
+TABLE_NAME
+--------------------------------------------------------------------------------
+SEARCH_CONDITION
+--------------------------------------------------------------------------------
+SEARCH_CONDITION_VC
+--------------------------------------------------------------------------------
+R_OWNER
+--------------------------------------------------------------------------------
+R_CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+DELETE_RU STATUS   DEFERRABLE     DEFERRED  VALIDATED     GENERATED      BAD
+--------- -------- -------------- --------- ------------- -------------- ---
+RELY LAST_CHAN
+---- ---------
+INDEX_OWNER
+--------------------------------------------------------------------------------
+INDEX_NAME
+--------------------------------------------------------------------------------
+INVALID VIEW_RELATED   ORIGIN_CON_ID
+------- -------------- -------------
+DID_PK2
+
+OWNER
+--------------------------------------------------------------------------------
+CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+C
+-
+TABLE_NAME
+--------------------------------------------------------------------------------
+SEARCH_CONDITION
+--------------------------------------------------------------------------------
+SEARCH_CONDITION_VC
+--------------------------------------------------------------------------------
+R_OWNER
+--------------------------------------------------------------------------------
+R_CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+DELETE_RU STATUS   DEFERRABLE     DEFERRED  VALIDATED     GENERATED      BAD
+--------- -------- -------------- --------- ------------- -------------- ---
+RELY LAST_CHAN
+---- ---------
+INDEX_OWNER
+--------------------------------------------------------------------------------
+INDEX_NAME
+--------------------------------------------------------------------------------
+INVALID VIEW_RELATED   ORIGIN_CON_ID
+------- -------------- -------------
+NO ACTION ENABLED  NOT DEFERRABLE IMMEDIATE VALIDATED     USER NAME
+
+OWNER
+--------------------------------------------------------------------------------
+CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+C
+-
+TABLE_NAME
+--------------------------------------------------------------------------------
+SEARCH_CONDITION
+--------------------------------------------------------------------------------
+SEARCH_CONDITION_VC
+--------------------------------------------------------------------------------
+R_OWNER
+--------------------------------------------------------------------------------
+R_CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+DELETE_RU STATUS   DEFERRABLE     DEFERRED  VALIDATED     GENERATED      BAD
+--------- -------- -------------- --------- ------------- -------------- ---
+RELY LAST_CHAN
+---- ---------
+INDEX_OWNER
+--------------------------------------------------------------------------------
+INDEX_NAME
+--------------------------------------------------------------------------------
+INVALID VIEW_RELATED   ORIGIN_CON_ID
+------- -------------- -------------
+     28-OCT-24
+
+OWNER
+--------------------------------------------------------------------------------
+CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+C
+-
+TABLE_NAME
+--------------------------------------------------------------------------------
+SEARCH_CONDITION
+--------------------------------------------------------------------------------
+SEARCH_CONDITION_VC
+--------------------------------------------------------------------------------
+R_OWNER
+--------------------------------------------------------------------------------
+R_CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+DELETE_RU STATUS   DEFERRABLE     DEFERRED  VALIDATED     GENERATED      BAD
+--------- -------- -------------- --------- ------------- -------------- ---
+RELY LAST_CHAN
+---- ---------
+INDEX_OWNER
+--------------------------------------------------------------------------------
+INDEX_NAME
+--------------------------------------------------------------------------------
+INVALID VIEW_RELATED   ORIGIN_CON_ID
+------- -------------- -------------
+
+
+OWNER
+--------------------------------------------------------------------------------
+CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+C
+-
+TABLE_NAME
+--------------------------------------------------------------------------------
+SEARCH_CONDITION
+--------------------------------------------------------------------------------
+SEARCH_CONDITION_VC
+--------------------------------------------------------------------------------
+R_OWNER
+--------------------------------------------------------------------------------
+R_CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+DELETE_RU STATUS   DEFERRABLE     DEFERRED  VALIDATED     GENERATED      BAD
+--------- -------- -------------- --------- ------------- -------------- ---
+RELY LAST_CHAN
+---- ---------
+INDEX_OWNER
+--------------------------------------------------------------------------------
+INDEX_NAME
+--------------------------------------------------------------------------------
+INVALID VIEW_RELATED   ORIGIN_CON_ID
+------- -------------- -------------
+
+
+OWNER
+--------------------------------------------------------------------------------
+CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+C
+-
+TABLE_NAME
+--------------------------------------------------------------------------------
+SEARCH_CONDITION
+--------------------------------------------------------------------------------
+SEARCH_CONDITION_VC
+--------------------------------------------------------------------------------
+R_OWNER
+--------------------------------------------------------------------------------
+R_CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+DELETE_RU STATUS   DEFERRABLE     DEFERRED  VALIDATED     GENERATED      BAD
+--------- -------- -------------- --------- ------------- -------------- ---
+RELY LAST_CHAN
+---- ---------
+INDEX_OWNER
+--------------------------------------------------------------------------------
+INDEX_NAME
+--------------------------------------------------------------------------------
+INVALID VIEW_RELATED   ORIGIN_CON_ID
+------- -------------- -------------
+                                   1
+
+OWNER
+--------------------------------------------------------------------------------
+CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+C
+-
+TABLE_NAME
+--------------------------------------------------------------------------------
+SEARCH_CONDITION
+--------------------------------------------------------------------------------
+SEARCH_CONDITION_VC
+--------------------------------------------------------------------------------
+R_OWNER
+--------------------------------------------------------------------------------
+R_CONSTRAINT_NAME
+--------------------------------------------------------------------------------
+DELETE_RU STATUS   DEFERRABLE     DEFERRED  VALIDATED     GENERATED      BAD
+--------- -------- -------------- --------- ------------- -------------- ---
+RELY LAST_CHAN
+---- ---------
+INDEX_OWNER
+--------------------------------------------------------------------------------
+INDEX_NAME
+--------------------------------------------------------------------------------
+INVALID VIEW_RELATED   ORIGIN_CON_ID
+------- -------------- -------------
+
+
+SQL> EDIT
+Wrote file afiedt.buf
+
+  1* SELECT * FROM user_constraints WHERE table_name ='STUDENT'
+SQL> DROP TABLE employee;
+
+Table dropped.
+
+SQL> edit
+Wrote file afiedt.buf
+
+  1  CREATE TABLE employee (
+  2  eid INTEGER CONSTRAINT eid_unq UNIQUE,
+  3  ename VARCHAR2(20),
+  4  salary NUMBER(10,2),
+  5* doj DATE)
+SQL> /
+
+Table created.
+
+SQL> INSERT INTO employee VALUES (&EMPID, '&employeeName', &salary, '&dateofjoining');
+Enter value for empid: 1001
+Enter value for employeename: Vydhika
+Enter value for salary: 2000000
+Enter value for dateofjoining: 1-JAN-2026
+old   1: INSERT INTO employee VALUES (&EMPID, '&employeeName', &salary, '&dateofjoining')
+new   1: INSERT INTO employee VALUES (1001, 'Vydhika', 2000000, '1-JAN-2026')
+
+1 row created.
+
+SQL> INSERT INTO employee VALUES (1001, 'Vydhika', 2000000, '1-JAN-2026');
+INSERT INTO employee VALUES (1001, 'Vydhika', 2000000, '1-JAN-2026')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SYSTEM.EID_UNQ) violated
+
+
+SQL> ALTER TABLE employee DROP CONSTRAINT eid_unq;
+
+Table altered.
+
+SQL> ALTER TABLE employee ADD CONSTRAINT eid_unq UNIQUE(eid);
+
+Table altered.
+
+SQL> ALTER TABLE employee DROP CONSTRAINT eid_unq;
+
+Table altered.
+
+SQL> ALTER TABLE employee ADD CONSTRAINT id_pkey PRIMARY KEY(eid);
+
+Table altered.
+
+SQL> INSERT INTO employee VALUES (1001, 'Vydhika', 2000000, '1-JAN-2026');
+INSERT INTO employee VALUES (1001, 'Vydhika', 2000000, '1-JAN-2026')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SYSTEM.ID_PKEY) violated
+
+
+SQL> INSERT INTO employee VALUES (null, 'Vydhika', 2000000, '1-JAN-2026');
+INSERT INTO employee VALUES (null, 'Vydhika', 2000000, '1-JAN-2026')
+                             *
+ERROR at line 1:
+ORA-01400: cannot insert NULL into ("SYSTEM"."EMPLOYEE"."EID")
+
+
+SQL> SELECT * FROM employee;
+
+       EID ENAME                    SALARY DOJ
+---------- -------------------- ---------- ---------
+      1001 Vydhika                 2000000 01-JAN-26
+
+SQL> ALER TABLE employee ADD (gender CHAR(1));
+SP2-0734: unknown command beginning "ALER TABLE..." - rest of line ignored.
+SQL> ALTER TABLE employee ADD (gender CHAR(1));
+
+Table altered.
+
+SQL> SELECT * FROM employee;
+
+       EID ENAME                    SALARY DOJ       G
+---------- -------------------- ---------- --------- -
+      1001 Vydhika                 2000000 01-JAN-26
+
+SQL> UPDATE employee SET gender='F';
+
+1 row updated.
+
+SQL> SELECT * FROM employee;
+
+       EID ENAME                    SALARY DOJ       G
+---------- -------------------- ---------- --------- -
+      1001 Vydhika                 2000000 01-JAN-26 F
+
+SQL> UPDATE employee SET gender='A';
+
+1 row updated.
+
+SQL> SELECT * FROM employee;
+
+       EID ENAME                    SALARY DOJ       G
+---------- -------------------- ---------- --------- -
+      1001 Vydhika                 2000000 01-JAN-26 A
+
+SQL> UPDATE employee SET gender=null;
+
+1 row updated.
+
+SQL> SELECT * FROM employee;
+
+       EID ENAME                    SALARY DOJ       G
+---------- -------------------- ---------- --------- -
+      1001 Vydhika                 2000000 01-JAN-26
+
+SQL> ALTER TABLE employee ADD CONSTRAINT gender_chk CHECK(gender(IN('F','f', 'M','m','T','t')));
+ALTER TABLE employee ADD CONSTRAINT gender_chk CHECK(gender(IN('F','f', 'M','m','T','t')))
+                                                            *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+SQL> ALTER TABLE employee ADD CONSTRAINT gender_chk CHECK(gender  IN('F','f', 'M','m','T','t'));
+
+Table altered.
+
+SQL> UPDATE employee SET gender='A';
+UPDATE employee SET gender='A'
+*
+ERROR at line 1:
+ORA-02290: check constraint (SYSTEM.GENDER_CHK) violated
+
+
+SQL> UPDATE employee SET gender='F';
+
+1 row updated.
+
+SQL> DROP TABLE employee;
+
+Table dropped.
+
+SQL> SELECT * FROM tab WHERE table_name LIKE 'D%';
+SELECT * FROM tab WHERE table_name LIKE 'D%'
+                        *
+ERROR at line 1:
+ORA-00904: "TABLE_NAME": invalid identifier
+
+
+SQL> DESCRIBE TAB;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ TNAME                                     NOT NULL VARCHAR2(128)
+ TABTYPE                                            VARCHAR2(13)
+ CLUSTERID                                          NUMBER
+
+SQL> SELECT * FROM tab WHERE tname LIKE 'D%';
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+DEPART
+TABLE
+
+DEPARTMENT
+TABLE
+
+DEPARTMENT1
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+DEPARTMENTS
+TABLE
+
+
+SQL> DROP TABLE DEPARTMENT;
+DROP TABLE DEPARTMENT
+           *
+ERROR at line 1:
+ORA-02449: unique/primary keys in table referenced by foreign keys
+
+
+SQL> DROP TABLE DEPARTMENT CASCADE;
+DROP TABLE DEPARTMENT CASCADE
+                            *
+ERROR at line 1:
+ORA-00905: missing keyword
+
+
+SQL> DROP TABLE department1;
+DROP TABLE department1
+           *
+ERROR at line 1:
+ORA-02449: unique/primary keys in table referenced by foreign keys
+
+
+SQL> CREATE TABLE departments (
+  2  did NUMBER(3),
+  3  dname VARHCAR2(30),
+  4  hod  VARCHAR2(30),
+  5  block CHAR(1));
+dname VARHCAR2(30),
+              *
+ERROR at line 3:
+ORA-00907: missing right parenthesis
+
+
+SQL> EDIT
+Wrote file afiedt.buf
+
+  1  CREATE TABLE departments (
+  2  did NUMBER(3),
+  3  dname VARCHAR2(30),
+  4  hod  VARCHAR2(30),
+  5* block CHAR(1))
+SQL> /
+CREATE TABLE departments (
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+SQL> DROP TABLE departments;
+
+Table dropped.
+
+SQL> CREATE TABLE departments (
+  2    2  did NUMBER(3),
+  3    3  dname VARCHAR2(30),
+  4    4  hod  VARCHAR2(30),
+  5    5* block CHAR(1));
+  2  did NUMBER(3),
+  *
+ERROR at line 2:
+ORA-00904: : invalid identifier
+
+
+SQL> edit
+Wrote file afiedt.buf
+
+  1  CREATE TABLE departments (
+  2    2  deptid NUMBER(3),
+  3    3  dname VARCHAR2(30),
+  4    4  hod  VARCHAR2(30),
+  5*   5* block CHAR(1))
+SQL> /
+  2  deptid NUMBER(3),
+  *
+ERROR at line 2:
+ORA-00904: : invalid identifier
+
+
+SQL> EDIT
+Wrote file afiedt.buf
+
+  1  CREATE TABLE departments (
+  2    2  deptid INTEGER,
+  3    3  dname VARCHAR2(30),
+  4    4  hod  VARCHAR2(30),
+  5*   5* block CHAR(1))
+SQL> /
+  2  deptid INTEGER,
+  *
+ERROR at line 2:
+ORA-00904: : invalid identifier
+
+
+SQL> EDIT
+Wrote file afiedt.buf
+
+  1  CREATE TABLE departments (
+  2  deptid INTEGER,
+  3  dname VARCHAR2(30),
+  4  hod  VARCHAR2(30),
+  5* block CHAR(1))
+SQL> /
+
+Table created.
+
+SQL> ALTER TABLE departments ADD CONSTRAINT dept_pk PRIMARY KEY(deptid);
+
+Table altered.
+
+SQL> CREATE TABLE employee (
+  2  eid INTEGER,
+  3
+SQL> CREATE TABLE employee (
+  2  eid INTEGER CONSTRAINT eid_pk,
+  3  ename VARCHAR2(30),
+  4  dept INTEGER,
+  5  salary NUMBER(12,2)
+  6  ;
+eid INTEGER CONSTRAINT eid_pk,
+            *
+ERROR at line 2:
+ORA-02253: constraint specification not allowed here
+
+
+SQL> EDIT
+Wrote file afiedt.buf
+
+  1  CREATE TABLE employee (
+  2  eid INTEGER CONSTRAINT eid_pk,
+  3  ename VARCHAR2(30),
+  4  dept INTEGER CONSTRAINT dept_rk REFERENCES departments(deptid),
+  5* salary NUMBER(12,2))
+SQL> /
+eid INTEGER CONSTRAINT eid_pk,
+            *
+ERROR at line 2:
+ORA-02253: constraint specification not allowed here
+
+
+SQL> EDIT
+Wrote file afiedt.buf
+
+  1  CREATE TABLE employee (
+  2  eid INTEGER CONSTRAINT eid_pk PRIMARY KEY,
+  3  ename VARCHAR2(30),
+  4  dept INTEGER CONSTRAINT dept_rk REFERENCES departments(deptid),
+  5* salary NUMBER(12,2))
+SQL> /
+
+Table created.
+
+SQL> INSERT INTO employee VALUES (1001, 'Ibrahim', 1, 1000000);
+INSERT INTO employee VALUES (1001, 'Ibrahim', 1, 1000000)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (SYSTEM.DEPT_RK) violated - parent key not
+found
+
+
+SQL> INSERT INTO employee VALUES (1001, 'Ibrahim', null, 1000000);
+
+1 row created.
+
+SQL> INSERT INTO departments VALUES (1, 'Computer Science and Engineering','Siddarth', 'C');
+INSERT INTO departments VALUES (1, 'Computer Science and Engineering', 'Siddarth', 'C')
+                                   *
+ERROR at line 1:
+ORA-12899: value too large for column "SYSTEM"."DEPARTMENTS"."DNAME" (actual:
+32, maximum: 30)
+
+
+SQL> ALTER TABLE departments MODIFY (dname VARCHAR2(50));
+
+Table altered.
+
+SQL> INSERT INTO departments VALUES (1, 'Computer Science and Engineering','Siddarth', 'C');
+
+1 row created.
+
+SQL> UPDATE employee SET dept = 1;
+
+1 row updated.
+
+SQL> INSERT INTO employee VALUES (1002, 'Maruvada', 2, 1000000);
+INSERT INTO employee VALUES (1002, 'Maruvada', 2, 1000000)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (SYSTEM.DEPT_RK) violated - parent key not
+found
+
+
+SQL> INSERT INTO employee VALUES (1002, 'Maruvada', 1, 1000000);
+
+1 row created.
+
+SQL> ALTER TABLE employee DISABLE dept_rk;
+ALTER TABLE employee DISABLE dept_rk
+                             *
+ERROR at line 1:
+ORA-00905: missing keyword
+
+
+SQL> ALTER TABLE employee  DISABLE CONSTRAINT dept_rk;
+
+Table altered.
+
+SQL> INSERT INTO employee VALUES (1003, 'Lokesh', 2, 1000000);
+
+1 row created.
+
+SQL> ALTER TABLE employee ENABLE CONSTRAINT dept_rk;
+ALTER TABLE employee ENABLE CONSTRAINT dept_rk
+                                       *
+ERROR at line 1:
+ORA-02298: cannot validate (SYSTEM.DEPT_RK) - parent keys not found
+
+
+SQL> INSERT INTO departments VALUES (2, '', 'Siddarth', 'C');
+
+1 row created.
+
+SQL> UPDATE departments SET dname = 'Electronics and Communication Engineering' WHERE deptid = 2;
+
+1 row updated.
+
+SQL> ALTER TABLE employee ENABLE CONSTRAINT dept_rk;
+
+Table altered.
+
+SQL> ALTER TABLE employee DROP CONSTRAINT dept_rk;
+
+Table altered.
+
+SQL> ALTER TABLE employee ADD CONSTRAINT dept-fk REFERENCES departments(deptid) FOREIGN KEY(dept);
+ALTER TABLE employee ADD CONSTRAINT dept-fk REFERENCES departments(deptid) FOREIGN KEY(dept)
+                                        *
+ERROR at line 1:
+ORA-00904: : invalid identifier
+
+
+SQL> ALTER TABLE employee ADD CONSTRAINT dept_fk REFERENCES departments(deptid) FOREIGN KEY(dept);
+ALTER TABLE employee ADD CONSTRAINT dept_fk REFERENCES departments(deptid) FOREIGN KEY(dept)
+                                                                   *
+ERROR at line 1:
+ORA-01735: invalid ALTER TABLE option
+
+
+SQL> ALTER TABLE employee ADD CONSTRAINT dept_fk FOREIGN KEY(dept) REFERENCES departments(deptid);
+
+Table altered.
+
+SQL> SELECT * FROM employee;
+
+       EID ENAME                                DEPT     SALARY
+---------- ------------------------------ ---------- ----------
+      1001 Ibrahim                                 1    1000000
+      1002 Maruvada                                1    1000000
+      1003 Lokesh                                  2    1000000
+
+SQL> ALTER TABLE employee ADD (doj DATE);
+
+Table altered.
+
+SQL> ALTER TABLE employee DROP (doj DATE);
+ALTER TABLE employee DROP (doj DATE)
+                               *
+ERROR at line 1:
+ORA-00907: missing right parenthesis
+
+
+SQL> ALTER TABLE employee DROP (doj);
+
+Table altered.
+
+SQL> ALTER TABLE employee ADD (doj DATE DEFAULT SYSDATE);
+
+Table altered.
+
+SQL> INSERT INTO employee (eid, ename, dept) VALUES (1005, 'Nandhini',1);
+
+1 row created.
+
+SQL> SELECT * FROM employee;
+
+       EID ENAME                                DEPT     SALARY DOJ
+---------- ------------------------------ ---------- ---------- ---------
+      1001 Ibrahim                                 1    1000000 14-JUL-25
+      1002 Maruvada                                1    1000000 14-JUL-25
+      1003 Lokesh                                  2    1000000 14-JUL-25
+      1005 Nandhini                                1            14-JUL-25
+
+SQL> INSERT INTO employee VALUES (1006, 'Jahnavi',1,2000000,'01-JUL-2026');
+
+1 row created.
+
+SQL> SELECT * FROM employee;
+
+       EID ENAME                                DEPT     SALARY DOJ
+---------- ------------------------------ ---------- ---------- ---------
+      1001 Ibrahim                                 1    1000000 14-JUL-25
+      1002 Maruvada                                1    1000000 14-JUL-25
+      1003 Lokesh                                  2    1000000 14-JUL-25
+      1005 Nandhini                                1            14-JUL-25
+      1006 Jahnavi                                 1    2000000 01-JUL-26
+
+SQL> SELECT SYSDATE FROM DUAL;
+
+SYSDATE
+---------
+14-JUL-25
+
+SQL> SELECT NOW() FROM dual;
+SELECT NOW() FROM dual
+       *
+ERROR at line 1:
+ORA-00904: "NOW": invalid identifier
+
+
+SQL> DELETE FROM employee;
+
+5 rows deleted.
+
+SQL> rollback;
+
+Rollback complete.
+
+SQL> SELECT * FROM employee;
+
+       EID ENAME                                DEPT     SALARY DOJ
+---------- ------------------------------ ---------- ---------- ---------
+      1001 Ibrahim                                 1    1000000 14-JUL-25
+      1002 Maruvada                                1    1000000 14-JUL-25
+      1003 Lokesh                                  2    1000000 14-JUL-25
+
+SQL> TRUNCATE TABLE employee;
+
+Table truncated.
+
+SQL> SELECT * FROM employee;
+
+no rows selected
+
+SQL> rollback;
+
+Rollback complete.
+
+SQL> SELECT * FROM employee;
+
+no rows selected
+
+SQL> RENAME employee to employees;
+RENAME employee to employees
+                   *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+SQL> DROP TABLE employees;
+
+Table dropped.
+
+SQL> RENAME employee to employees;
+
+Table renamed.
+
+SQL> SELECT * FROM students;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 Vivek                          M         10 10-JAN-25          2
+       102 Aparna                         F         10 10-APR-24          1
+       103 Muneeb                         M         10 10-JAN-25          3
+       104 Sriram                         M         10 10-MAR-25          2
+       105 Lokesh                         M         10 01-FEB-25          3
+       106 Rajesh                         M        7.9 10-JUL-25          3
+       107 Ravinder                       M        6.5 10-DEC-25          3
+       108 Avinash                        M        6.9 10-OCT-25          2
+       109 Madhan                         M         10 10-OCT-24          2
+       110 Pruthvi                        M         10 10-OCT-24          2
+       111 Kamal                          M         10 10-OCT-24          2
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       109 Sundar                         M        9.9 10-JAN-24
+       111 Thanvi                         F        9.5 10-JAN-25          1
+       112 Gajanan                        M        9.1 10-JAN-25          1
+       113 Pooja                          F        9.8 10-JAN-25          1
+       114 Pooja                          F        9.8 10-JAN-25          1
+
+16 rows selected.
+
+SQL> CREATE TABLE temp_table SELECT * FOM students;
+CREATE TABLE temp_table SELECT * FOM students
+                        *
+ERROR at line 1:
+ORA-00922: missing or invalid option
+
+
+SQL> CREATE TABLE temp_table SELECT * FROM students;
+CREATE TABLE temp_table SELECT * FROM students
+                        *
+ERROR at line 1:
+ORA-00922: missing or invalid option
+
+
+SQL> CREATE TABLE temp_table AS SELECT * FROM students;
+
+Table created.
+
+SQL> CREATE TABLE temp_table AS SELECT * FROM students WHERE 10 = 20;
+CREATE TABLE temp_table AS SELECT * FROM students WHERE 10 = 20
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+SQL> CREATE TABLE temp_table1 AS SELECT * FROM students WHERE 10 = 20;
+
+Table created.
+
+SQL> SELECT * FROM temp_table;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 Vivek                          M         10 10-JAN-25          2
+       102 Aparna                         F         10 10-APR-24          1
+       103 Muneeb                         M         10 10-JAN-25          3
+       104 Sriram                         M         10 10-MAR-25          2
+       105 Lokesh                         M         10 01-FEB-25          3
+       106 Rajesh                         M        7.9 10-JUL-25          3
+       107 Ravinder                       M        6.5 10-DEC-25          3
+       108 Avinash                        M        6.9 10-OCT-25          2
+       109 Madhan                         M         10 10-OCT-24          2
+       110 Pruthvi                        M         10 10-OCT-24          2
+       111 Kamal                          M         10 10-OCT-24          2
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       109 Sundar                         M        9.9 10-JAN-24
+       111 Thanvi                         F        9.5 10-JAN-25          1
+       112 Gajanan                        M        9.1 10-JAN-25          1
+       113 Pooja                          F        9.8 10-JAN-25          1
+       114 Pooja                          F        9.8 10-JAN-25          1
+
+16 rows selected.
+
+SQL> SELECT * FROM temp_table1;
+
+no rows selected
+
+SQL> DESCRIBE temp_table1;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SID                                                NUMBER(38)
+ SNAME                                              VARCHAR2(30)
+ GENDER                                             CHAR(1)
+ CGPA                                               NUMBER(4,2)
+ DOJ                                                DATE
+ DEPT                                               NUMBER(38)
+
+SQL> DESCRIBE students;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SID                                                NUMBER(38)
+ SNAME                                              VARCHAR2(30)
+ GENDER                                             CHAR(1)
+ CGPA                                               NUMBER(4,2)
+ DOJ                                                DATE
+ DEPT                                               NUMBER(38)
+
+SQL> INSERT INTO temp_table1 SELECT * FROM students;
+
+16 rows created.
+
+SQL> SELECT * FROM students;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 Vivek                          M         10 10-JAN-25          2
+       102 Aparna                         F         10 10-APR-24          1
+       103 Muneeb                         M         10 10-JAN-25          3
+       104 Sriram                         M         10 10-MAR-25          2
+       105 Lokesh                         M         10 01-FEB-25          3
+       106 Rajesh                         M        7.9 10-JUL-25          3
+       107 Ravinder                       M        6.5 10-DEC-25          3
+       108 Avinash                        M        6.9 10-OCT-25          2
+       109 Madhan                         M         10 10-OCT-24          2
+       110 Pruthvi                        M         10 10-OCT-24          2
+       111 Kamal                          M         10 10-OCT-24          2
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       109 Sundar                         M        9.9 10-JAN-24
+       111 Thanvi                         F        9.5 10-JAN-25          1
+       112 Gajanan                        M        9.1 10-JAN-25          1
+       113 Pooja                          F        9.8 10-JAN-25          1
+       114 Pooja                          F        9.8 10-JAN-25          1
+
+16 rows selected.
+
+SQL> UPDATE employee SET sname = UPPER(sname);
+UPDATE employee SET sname = UPPER(sname)
+       *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> UPDATE students SET sname = UPPER(sname);
+
+16 rows updated.
+
+SQL> SELECT * FROM students;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 VIVEK                          M         10 10-JAN-25          2
+       102 APARNA                         F         10 10-APR-24          1
+       103 MUNEEB                         M         10 10-JAN-25          3
+       104 SRIRAM                         M         10 10-MAR-25          2
+       105 LOKESH                         M         10 01-FEB-25          3
+       106 RAJESH                         M        7.9 10-JUL-25          3
+       107 RAVINDER                       M        6.5 10-DEC-25          3
+       108 AVINASH                        M        6.9 10-OCT-25          2
+       109 MADHAN                         M         10 10-OCT-24          2
+       110 PRUTHVI                        M         10 10-OCT-24          2
+       111 KAMAL                          M         10 10-OCT-24          2
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       109 SUNDAR                         M        9.9 10-JAN-24
+       111 THANVI                         F        9.5 10-JAN-25          1
+       112 GAJANAN                        M        9.1 10-JAN-25          1
+       113 POOJA                          F        9.8 10-JAN-25          1
+       114 POOJA                          F        9.8 10-JAN-25          1
+
+16 rows selected.
+
+SQL> SELECT 10 + 20 FROM dual;
+
+     10+20
+----------
+        30
+
+SQL> SELECT SYSDATE FROM dual;
+
+SYSDATE
+---------
+14-JUL-25
+
+SQL> SELECT * FROM students;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 VIVEK                          M         10 10-JAN-25          2
+       102 APARNA                         F         10 10-APR-24          1
+       103 MUNEEB                         M         10 10-JAN-25          3
+       104 SRIRAM                         M         10 10-MAR-25          2
+       105 LOKESH                         M         10 01-FEB-25          3
+       106 RAJESH                         M        7.9 10-JUL-25          3
+       107 RAVINDER                       M        6.5 10-DEC-25          3
+       108 AVINASH                        M        6.9 10-OCT-25          2
+       109 MADHAN                         M         10 10-OCT-24          2
+       110 PRUTHVI                        M         10 10-OCT-24          2
+       111 KAMAL                          M         10 10-OCT-24          2
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       109 SUNDAR                         M        9.9 10-JAN-24
+       111 THANVI                         F        9.5 10-JAN-25          1
+       112 GAJANAN                        M        9.1 10-JAN-25          1
+       113 POOJA                          F        9.8 10-JAN-25          1
+       114 POOJA                          F        9.8 10-JAN-25          1
+
+16 rows selected.
+
+SQL> SELECT sid "Roll Number", sname "Student Name", gender "Gender" FROM students;
+
+Roll Number Student Name                   G
+----------- ------------------------------ -
+        101 VIVEK                          M
+        102 APARNA                         F
+        103 MUNEEB                         M
+        104 SRIRAM                         M
+        105 LOKESH                         M
+        106 RAJESH                         M
+        107 RAVINDER                       M
+        108 AVINASH                        M
+        109 MADHAN                         M
+        110 PRUTHVI                        M
+        111 KAMAL                          M
+
+Roll Number Student Name                   G
+----------- ------------------------------ -
+        109 SUNDAR                         M
+        111 THANVI                         F
+        112 GAJANAN                        M
+        113 POOJA                          F
+        114 POOJA                          F
+
+16 rows selected.
+
+SQL> SELECT 10 || "Testing" FROM dual;
+SELECT 10 || "Testing" FROM dual
+             *
+ERROR at line 1:
+ORA-00904: "Testing": invalid identifier
+
+
+SQL> SELECT 10 || 'Testing' FROM dual;
+
+10||'TEST
+---------
+10Testing
+
+SQL> SELECT 'Satish is soo cute' || 'This is testing' FROM dual;
+
+'SATISHISSOOCUTE'||'THISISTESTING
+---------------------------------
+Satish is soo cuteThis is testing
+
+SQL> SELECT DISTINCT * FROM students;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       106 RAJESH                         M        7.9 10-JUL-25          3
+       113 POOJA                          F        9.8 10-JAN-25          1
+       109 MADHAN                         M         10 10-OCT-24          2
+       111 KAMAL                          M         10 10-OCT-24          2
+       104 SRIRAM                         M         10 10-MAR-25          2
+       111 THANVI                         F        9.5 10-JAN-25          1
+       112 GAJANAN                        M        9.1 10-JAN-25          1
+       108 AVINASH                        M        6.9 10-OCT-25          2
+       101 VIVEK                          M         10 10-JAN-25          2
+       103 MUNEEB                         M         10 10-JAN-25          3
+       105 LOKESH                         M         10 01-FEB-25          3
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       107 RAVINDER                       M        6.5 10-DEC-25          3
+       102 APARNA                         F         10 10-APR-24          1
+       109 SUNDAR                         M        9.9 10-JAN-24
+       114 POOJA                          F        9.8 10-JAN-25          1
+       110 PRUTHVI                        M         10 10-OCT-24          2
+
+16 rows selected.
+
+SQL> SELECT USER FROM dual;
+
+USER
+--------------------------------------------------------------------------------
+SYSTEM
+
+SQL> CREATE USER ibrahim IDENTIFIED BY 12345;
+CREATE USER ibrahim IDENTIFIED BY 12345
+            *
+ERROR at line 1:
+ORA-65096: invalid common user or role name
+
+
+SQL> alter session set "_ORACLE_SCRIPT"=true;
+
+Session altered.
+
+SQL> CREATE USER ibrahim IDENTIFIED BY 12345;
+
+User created.
+
+SQL> GRANT CONNECT TO IBRAHIM;
+
+Grant succeeded.
+
+SQL> GRANT RESOURCE TO IBRAHIM;
+
+Grant succeeded.
+
+SQL> SELECT * FROM students;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 VIVEK                          M         10 10-JAN-25          2
+       102 APARNA                         F         10 10-APR-24          1
+       103 MUNEEB                         M         10 10-JAN-25          3
+       104 SRIRAM                         M         10 10-MAR-25          2
+       105 LOKESH                         M         10 01-FEB-25          3
+       106 RAJESH                         M        7.9 10-JUL-25          3
+       107 RAVINDER                       M        6.5 10-DEC-25          3
+       108 AVINASH                        M        6.9 10-OCT-25          2
+       109 MADHAN                         M         10 10-OCT-24          2
+       110 PRUTHVI                        M         10 10-OCT-24          2
+       111 KAMAL                          M         10 10-OCT-24          2
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       109 SUNDAR                         M        9.9 10-JAN-24
+       111 THANVI                         F        9.5 10-JAN-25          1
+       112 GAJANAN                        M        9.1 10-JAN-25          1
+       113 POOJA                          F        9.8 10-JAN-25          1
+       114 POOJA                          F        9.8 10-JAN-25          1
+
+16 rows selected.
+
+SQL> GRANT SELECT ON students TO ibrahim;
+
+Grant succeeded.
+
+SQL> GRANT DELETE ON students TO ibrahim;
+
+Grant succeeded.
+
+SQL> SELECT * FROM students;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 VIVEK                          M         10 10-JAN-25          2
+       102 APARNA                         F         10 10-APR-24          1
+       103 MUNEEB                         M         10 10-JAN-25          3
+       104 SRIRAM                         M         10 10-MAR-25          2
+       105 LOKESH                         M         10 01-FEB-25          3
+       106 RAJESH                         M        7.9 10-JUL-25          3
+       107 RAVINDER                       M        6.5 10-DEC-25          3
+       108 AVINASH                        M        6.9 10-OCT-25          2
+       109 MADHAN                         M         10 10-OCT-24          2
+       110 PRUTHVI                        M         10 10-OCT-24          2
+       111 KAMAL                          M         10 10-OCT-24          2
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       109 SUNDAR                         M        9.9 10-JAN-24
+       111 THANVI                         F        9.5 10-JAN-25          1
+       112 GAJANAN                        M        9.1 10-JAN-25          1
+       113 POOJA                          F        9.8 10-JAN-25          1
+       114 POOJA                          F        9.8 10-JAN-25          1
+
+16 rows selected.
+
+SQL> SHOW AUTOCOMMIT;
+autocommit OFF
+SQL> SELECT * FROM students;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 VIVEK                          M         10 10-JAN-25          2
+       102 APARNA                         F         10 10-APR-24          1
+       103 MUNEEB                         M         10 10-JAN-25          3
+       104 SRIRAM                         M         10 10-MAR-25          2
+       105 LOKESH                         M         10 01-FEB-25          3
+       106 RAJESH                         M        7.9 10-JUL-25          3
+       107 RAVINDER                       M        6.5 10-DEC-25          3
+       108 AVINASH                        M        6.9 10-OCT-25          2
+       109 MADHAN                         M         10 10-OCT-24          2
+       110 PRUTHVI                        M         10 10-OCT-24          2
+       111 KAMAL                          M         10 10-OCT-24          2
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       109 SUNDAR                         M        9.9 10-JAN-24
+       111 THANVI                         F        9.5 10-JAN-25          1
+       112 GAJANAN                        M        9.1 10-JAN-25          1
+       113 POOJA                          F        9.8 10-JAN-25          1
+       114 POOJA                          F        9.8 10-JAN-25          1
+
+16 rows selected.
+
+SQL> SELECT * FROM students;
+
+no rows selected
+
+SQL> SELECT * FROM students;
+
+no rows selected
+
+SQL> INSERT INTO students SELECT * FROM temp_table1;
+
+16 rows created.
+
+SQL> REVOKE DELETE ON students FROM ibrahim;
+
+Revoke succeeded.
+
+SQL> GRANT ALL ON students TO ibrahim;
+
+Grant succeeded.
+
+SQL> REVOKE DELETE ON students FROM ibrahim;
+
+Revoke succeeded.
+
+SQL> REVOKE ALL ON students FROM ibrahim;
+
+Revoke succeeded.
+
+SQL> REVOKE RESOURCE FROM ibrahim;
+
+Revoke succeeded.
+
+SQL> REVOKE CONNECT FROM IBRAHIM;
+
+Revoke succeeded.
+
+SQL> DROP USER ibrahim;
+DROP USER ibrahim
+*
+ERROR at line 1:
+ORA-01922: CASCADE must be specified to drop 'IBRAHIM'
+
+
+SQL> DROP USER ibrahim CASCADE;
+
+User dropped.
+
+SQL>

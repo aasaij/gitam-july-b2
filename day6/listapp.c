@@ -89,6 +89,13 @@ void printList(node* root){
 	else
 		printf("\n[]\n");	
 }
+void printReverse(node* list){
+	if (list){
+		printReverse(list->nxt);
+//		if (list->element =='A') exit(0);
+		printf("'%c' ", list->element);
+	}
+}
 int main(){
     node* root = NULL;
     root = addFirst(root, 'A');
@@ -96,13 +103,14 @@ int main(){
     root = addFirst(root, 'C');
     root = addLast(root, 'D');
     root = addLast(root, 'E');
-    root = addAt(root, 'F', 0);
-    root = addAt(root, 'G',7);
-    root = addAt(root, 'J', 4); // F C B J A D E G
-//    root = deleteFirst(root);
-	root = deleteAt(root, 0);
-	root = deleteAt(root, 9);
-	root = deleteAt(root, 5); // C B J A E G
-    printList(root);
+    printReverse(root);
+//    root = addAt(root, 'F', 0);
+//    root = addAt(root, 'G',7);
+//    root = addAt(root, 'J', 4); // F C B J A D E G
+////    root = deleteFirst(root);
+//	root = deleteAt(root, 0);
+//	root = deleteAt(root, 9);
+//	root = deleteAt(root, 5); // C B J A E G
+//    printList(root);
     return 0;
 }
