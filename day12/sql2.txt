@@ -1,0 +1,1286 @@
+
+SQL*Plus: Release 19.0.0.0.0 - Production on Tue Jul 15 09:29:05 2025
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle.  All rights reserved.
+
+Enter user-name: system
+Enter password:
+Last Successful login time: Mon Jul 14 2025 16:05:16 +05:30
+
+Connected to:
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.3.0.0.0
+
+SQL> DESCRIBE students;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SID                                                NUMBER(38)
+ SNAME                                              VARCHAR2(30)
+ GENDER                                             CHAR(1)
+ CGPA                                               NUMBER(4,2)
+ DOJ                                                DATE
+ DEPT                                               NUMBER(38)
+
+SQL> SELECT * FROM students WHERE sname LIKE
+  2  '___';
+
+no rows selected
+
+SQL> SELECT * FROM students;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 VIVEK                          M         10 10-JAN-25          2
+       102 APARNA                         F         10 10-APR-24          1
+       103 MUNEEB                         M         10 10-JAN-25          3
+       104 SRIRAM                         M         10 10-MAR-25          2
+       105 LOKESH                         M         10 01-FEB-25          3
+       106 RAJESH                         M        7.9 10-JUL-25          3
+       107 RAVINDER                       M        6.5 10-DEC-25          3
+       108 AVINASH                        M        6.9 10-OCT-25          2
+       109 MADHAN                         M         10 10-OCT-24          2
+       110 PRUTHVI                        M         10 10-OCT-24          2
+       111 KAMAL                          M         10 10-OCT-24          2
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       109 SUNDAR                         M        9.9 10-JAN-24
+       111 THANVI                         F        9.5 10-JAN-25          1
+       112 GAJANAN                        M        9.1 10-JAN-25          1
+       113 POOJA                          F        9.8 10-JAN-25          1
+       114 POOJA                          F        9.8 10-JAN-25          1
+
+16 rows selected.
+
+SQL> SELECT * FROM students WHERE sname LIKE '_A%';
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       106 RAJESH                         M        7.9 10-JUL-25          3
+       107 RAVINDER                       M        6.5 10-DEC-25          3
+       109 MADHAN                         M         10 10-OCT-24          2
+       111 KAMAL                          M         10 10-OCT-24          2
+       112 GAJANAN                        M        9.1 10-JAN-25          1
+
+SQL> SELECT * FROM students WHERE sname LIKE '%N%';
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       102 APARNA                         F         10 10-APR-24          1
+       103 MUNEEB                         M         10 10-JAN-25          3
+       107 RAVINDER                       M        6.5 10-DEC-25          3
+       108 AVINASH                        M        6.9 10-OCT-25          2
+       109 MADHAN                         M         10 10-OCT-24          2
+       109 SUNDAR                         M        9.9 10-JAN-24
+       111 THANVI                         F        9.5 10-JAN-25          1
+       112 GAJANAN                        M        9.1 10-JAN-25          1
+
+8 rows selected.
+
+SQL> SELECT * FROM students WHERE sname LIKE 'A%';
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       102 APARNA                         F         10 10-APR-24          1
+       108 AVINASH                        M        6.9 10-OCT-25          2
+
+SQL> SELECT * FROM students WHERE sname LIKE '%A';
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       102 APARNA                         F         10 10-APR-24          1
+       113 POOJA                          F        9.8 10-JAN-25          1
+       114 POOJA                          F        9.8 10-JAN-25          1
+
+SQL> SELECT * FROM students WHERE sname LIKE 'A%A';
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       102 APARNA                         F         10 10-APR-24          1
+
+SQL> SELECT * FROM students WHERE sname NOT LIKE 'A%A';
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 VIVEK                          M         10 10-JAN-25          2
+       103 MUNEEB                         M         10 10-JAN-25          3
+       104 SRIRAM                         M         10 10-MAR-25          2
+       105 LOKESH                         M         10 01-FEB-25          3
+       106 RAJESH                         M        7.9 10-JUL-25          3
+       107 RAVINDER                       M        6.5 10-DEC-25          3
+       108 AVINASH                        M        6.9 10-OCT-25          2
+       109 MADHAN                         M         10 10-OCT-24          2
+       110 PRUTHVI                        M         10 10-OCT-24          2
+       111 KAMAL                          M         10 10-OCT-24          2
+       109 SUNDAR                         M        9.9 10-JAN-24
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       111 THANVI                         F        9.5 10-JAN-25          1
+       112 GAJANAN                        M        9.1 10-JAN-25          1
+       113 POOJA                          F        9.8 10-JAN-25          1
+       114 POOJA                          F        9.8 10-JAN-25          1
+
+15 rows selected.
+
+SQL> SELECT * FROM students WHERE sname NOT LIKE '__A%';
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 VIVEK                          M         10 10-JAN-25          2
+       103 MUNEEB                         M         10 10-JAN-25          3
+       104 SRIRAM                         M         10 10-MAR-25          2
+       105 LOKESH                         M         10 01-FEB-25          3
+       106 RAJESH                         M        7.9 10-JUL-25          3
+       107 RAVINDER                       M        6.5 10-DEC-25          3
+       108 AVINASH                        M        6.9 10-OCT-25          2
+       109 MADHAN                         M         10 10-OCT-24          2
+       110 PRUTHVI                        M         10 10-OCT-24          2
+       111 KAMAL                          M         10 10-OCT-24          2
+       109 SUNDAR                         M        9.9 10-JAN-24
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       112 GAJANAN                        M        9.1 10-JAN-25          1
+       113 POOJA                          F        9.8 10-JAN-25          1
+       114 POOJA                          F        9.8 10-JAN-25          1
+
+14 rows selected.
+
+SQL> SELECT * FROM students WHERE sname LIKE '__A%';
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       102 APARNA                         F         10 10-APR-24          1
+       111 THANVI                         F        9.5 10-JAN-25          1
+
+SQL> SELECT * FROM students;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 VIVEK                          M         10 10-JAN-25          2
+       102 APARNA                         F         10 10-APR-24          1
+       103 MUNEEB                         M         10 10-JAN-25          3
+       104 SRIRAM                         M         10 10-MAR-25          2
+       105 LOKESH                         M         10 01-FEB-25          3
+       106 RAJESH                         M        7.9 10-JUL-25          3
+       107 RAVINDER                       M        6.5 10-DEC-25          3
+       108 AVINASH                        M        6.9 10-OCT-25          2
+       109 MADHAN                         M         10 10-OCT-24          2
+       110 PRUTHVI                        M         10 10-OCT-24          2
+       111 KAMAL                          M         10 10-OCT-24          2
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       109 SUNDAR                         M        9.9 10-JAN-24
+       111 THANVI                         F        9.5 10-JAN-25          1
+       112 GAJANAN                        M        9.1 10-JAN-25          1
+       113 POOJA                          F        9.8 10-JAN-25          1
+       114 POOJA                          F        9.8 10-JAN-25          1
+
+16 rows selected.
+
+SQL> SELECT * FROM students WHERE cgpa >= 8 AND cgpa <=9;
+
+no rows selected
+
+SQL> SELECT * FROM students WHERE cgpa >= 8 AND cgpa <=9.5;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       111 THANVI                         F        9.5 10-JAN-25          1
+       112 GAJANAN                        M        9.1 10-JAN-25          1
+
+SQL> SELECT * FROM students WHERE cgpa BETWEEN 8 AND 9.5;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       111 THANVI                         F        9.5 10-JAN-25          1
+       112 GAJANAN                        M        9.1 10-JAN-25          1
+
+SQL> SELECT * FROM students WHERE cgpa NOT BETWEEN 8 AND 9.5;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 VIVEK                          M         10 10-JAN-25          2
+       102 APARNA                         F         10 10-APR-24          1
+       103 MUNEEB                         M         10 10-JAN-25          3
+       104 SRIRAM                         M         10 10-MAR-25          2
+       105 LOKESH                         M         10 01-FEB-25          3
+       106 RAJESH                         M        7.9 10-JUL-25          3
+       107 RAVINDER                       M        6.5 10-DEC-25          3
+       108 AVINASH                        M        6.9 10-OCT-25          2
+       109 MADHAN                         M         10 10-OCT-24          2
+       110 PRUTHVI                        M         10 10-OCT-24          2
+       111 KAMAL                          M         10 10-OCT-24          2
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       109 SUNDAR                         M        9.9 10-JAN-24
+       113 POOJA                          F        9.8 10-JAN-25          1
+       114 POOJA                          F        9.8 10-JAN-25          1
+
+14 rows selected.
+
+SQL> SELECT * FROM students WHERE cgpa < 8 OR cgpa > 9.5;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 VIVEK                          M         10 10-JAN-25          2
+       102 APARNA                         F         10 10-APR-24          1
+       103 MUNEEB                         M         10 10-JAN-25          3
+       104 SRIRAM                         M         10 10-MAR-25          2
+       105 LOKESH                         M         10 01-FEB-25          3
+       106 RAJESH                         M        7.9 10-JUL-25          3
+       107 RAVINDER                       M        6.5 10-DEC-25          3
+       108 AVINASH                        M        6.9 10-OCT-25          2
+       109 MADHAN                         M         10 10-OCT-24          2
+       110 PRUTHVI                        M         10 10-OCT-24          2
+       111 KAMAL                          M         10 10-OCT-24          2
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       109 SUNDAR                         M        9.9 10-JAN-24
+       113 POOJA                          F        9.8 10-JAN-25          1
+       114 POOJA                          F        9.8 10-JAN-25          1
+
+14 rows selected.
+
+SQL> SELECT * FROM students WHERE cgpa = 10 OR cgpa = 6.9 OR cgpa = 9.8;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 VIVEK                          M         10 10-JAN-25          2
+       102 APARNA                         F         10 10-APR-24          1
+       103 MUNEEB                         M         10 10-JAN-25          3
+       104 SRIRAM                         M         10 10-MAR-25          2
+       105 LOKESH                         M         10 01-FEB-25          3
+       108 AVINASH                        M        6.9 10-OCT-25          2
+       109 MADHAN                         M         10 10-OCT-24          2
+       110 PRUTHVI                        M         10 10-OCT-24          2
+       111 KAMAL                          M         10 10-OCT-24          2
+       113 POOJA                          F        9.8 10-JAN-25          1
+       114 POOJA                          F        9.8 10-JAN-25          1
+
+11 rows selected.
+
+SQL> SELECT * FROM students WHERE cgpa IN(10,6.9,9.8);
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 VIVEK                          M         10 10-JAN-25          2
+       102 APARNA                         F         10 10-APR-24          1
+       103 MUNEEB                         M         10 10-JAN-25          3
+       104 SRIRAM                         M         10 10-MAR-25          2
+       105 LOKESH                         M         10 01-FEB-25          3
+       108 AVINASH                        M        6.9 10-OCT-25          2
+       109 MADHAN                         M         10 10-OCT-24          2
+       110 PRUTHVI                        M         10 10-OCT-24          2
+       111 KAMAL                          M         10 10-OCT-24          2
+       113 POOJA                          F        9.8 10-JAN-25          1
+       114 POOJA                          F        9.8 10-JAN-25          1
+
+11 rows selected.
+
+SQL> SELECT * FROM students WHERE cgpa NOT IN(10,6.9,9.8);
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       106 RAJESH                         M        7.9 10-JUL-25          3
+       107 RAVINDER                       M        6.5 10-DEC-25          3
+       109 SUNDAR                         M        9.9 10-JAN-24
+       111 THANVI                         F        9.5 10-JAN-25          1
+       112 GAJANAN                        M        9.1 10-JAN-25          1
+
+SQL> SHOW FEEDBACK
+FEEDBACK ON for 6 or more rows SQL_ID OFF
+SQL> SET FEEDBACK ON
+SQL> SELECT * FROM students WHERE cgpa NOT IN(10,6.9,9.8);
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       106 RAJESH                         M        7.9 10-JUL-25          3
+       107 RAVINDER                       M        6.5 10-DEC-25          3
+       109 SUNDAR                         M        9.9 10-JAN-24
+       111 THANVI                         F        9.5 10-JAN-25          1
+       112 GAJANAN                        M        9.1 10-JAN-25          1
+
+5 rows selected.
+
+SQL> SHOW FEEDBACK
+FEEDBACK ON for 1 or more rows SQL_ID OFF
+SQL> SELECT * FROM students WHERE dept IS NULL;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       109 SUNDAR                         M        9.9 10-JAN-24
+
+1 row selected.
+
+SQL> SELECT * FROM students WHERE dept IS NOT NULL;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 VIVEK                          M         10 10-JAN-25          2
+       102 APARNA                         F         10 10-APR-24          1
+       103 MUNEEB                         M         10 10-JAN-25          3
+       104 SRIRAM                         M         10 10-MAR-25          2
+       105 LOKESH                         M         10 01-FEB-25          3
+       106 RAJESH                         M        7.9 10-JUL-25          3
+       107 RAVINDER                       M        6.5 10-DEC-25          3
+       108 AVINASH                        M        6.9 10-OCT-25          2
+       109 MADHAN                         M         10 10-OCT-24          2
+       110 PRUTHVI                        M         10 10-OCT-24          2
+       111 KAMAL                          M         10 10-OCT-24          2
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       111 THANVI                         F        9.5 10-JAN-25          1
+       112 GAJANAN                        M        9.1 10-JAN-25          1
+       113 POOJA                          F        9.8 10-JAN-25          1
+       114 POOJA                          F        9.8 10-JAN-25          1
+
+15 rows selected.
+
+SQL> UPDATE students SET dept=null WHERE sname = 'POOJA';
+
+2 rows updated.
+
+SQL> SELECT * FROM students WHERE dept IS NULL;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       109 SUNDAR                         M        9.9 10-JAN-24
+       113 POOJA                          F        9.8 10-JAN-25
+       114 POOJA                          F        9.8 10-JAN-25
+
+3 rows selected.
+
+SQL> SELECT SNAME, DEPT FROM STUDENTS;
+
+SNAME                                DEPT
+------------------------------ ----------
+VIVEK                                   2
+APARNA                                  1
+MUNEEB                                  3
+SRIRAM                                  2
+LOKESH                                  3
+RAJESH                                  3
+RAVINDER                                3
+AVINASH                                 2
+MADHAN                                  2
+PRUTHVI                                 2
+KAMAL                                   2
+
+SNAME                                DEPT
+------------------------------ ----------
+SUNDAR
+THANVI                                  1
+GAJANAN                                 1
+POOJA
+POOJA
+
+16 rows selected.
+
+SQL> SELECT SNAME, NVL(DEPT,'N/A') FROM STUDENTS;
+SELECT SNAME, NVL(DEPT,'N/A') FROM STUDENTS
+                       *
+ERROR at line 1:
+ORA-01722: invalid number
+
+
+SQL> SELECT SNAME, NVL(DEPT,0) FROM STUDENTS;
+
+SNAME                          NVL(DEPT,0)
+------------------------------ -----------
+VIVEK                                    2
+APARNA                                   1
+MUNEEB                                   3
+SRIRAM                                   2
+LOKESH                                   3
+RAJESH                                   3
+RAVINDER                                 3
+AVINASH                                  2
+MADHAN                                   2
+PRUTHVI                                  2
+KAMAL                                    2
+
+SNAME                          NVL(DEPT,0)
+------------------------------ -----------
+SUNDAR                                   0
+THANVI                                   1
+GAJANAN                                  1
+POOJA                                    0
+POOJA                                    0
+
+16 rows selected.
+
+SQL> UPDATE students SET sname = NULL WHERE sname = 'KAMAL';
+
+1 row updated.
+
+SQL> SELECT SNAME, NVL(DEPT,0) FROM STUDENTS;
+
+SNAME                          NVL(DEPT,0)
+------------------------------ -----------
+VIVEK                                    2
+APARNA                                   1
+MUNEEB                                   3
+SRIRAM                                   2
+LOKESH                                   3
+RAJESH                                   3
+RAVINDER                                 3
+AVINASH                                  2
+MADHAN                                   2
+PRUTHVI                                  2
+                                         2
+
+SNAME                          NVL(DEPT,0)
+------------------------------ -----------
+SUNDAR                                   0
+THANVI                                   1
+GAJANAN                                  1
+POOJA                                    0
+POOJA                                    0
+
+16 rows selected.
+
+SQL> SELECT NVL(SNAME, 'UNDEFINED'), NVL(DEPT,0) FROM STUDENTS;
+
+NVL(SNAME,'UNDEFINED')         NVL(DEPT,0)
+------------------------------ -----------
+VIVEK                                    2
+APARNA                                   1
+MUNEEB                                   3
+SRIRAM                                   2
+LOKESH                                   3
+RAJESH                                   3
+RAVINDER                                 3
+AVINASH                                  2
+MADHAN                                   2
+PRUTHVI                                  2
+UNDEFINED                                2
+
+NVL(SNAME,'UNDEFINED')         NVL(DEPT,0)
+------------------------------ -----------
+SUNDAR                                   0
+THANVI                                   1
+GAJANAN                                  1
+POOJA                                    0
+POOJA                                    0
+
+16 rows selected.
+
+SQL> SELECT ABS(10-20) FROM dual;
+
+ABS(10-20)
+----------
+        10
+
+1 row selected.
+
+SQL> SELECT FLOOR(10.20) FROM dual;
+
+FLOOR(10.20)
+------------
+          10
+
+1 row selected.
+
+SQL> SELECT FLOOR(-0.20) FROM dual;
+
+FLOOR(-0.20)
+------------
+          -1
+
+1 row selected.
+
+SQL> SELECT CEIL(-0.20) FROM dual;
+
+CEIL(-0.20)
+-----------
+          0
+
+1 row selected.
+
+SQL> SELECT SQRT(100) FROM dual;
+
+ SQRT(100)
+----------
+        10
+
+1 row selected.
+
+SQL> SELECT ROUND(100.9) FROM dual;
+
+ROUND(100.9)
+------------
+         101
+
+1 row selected.
+
+SQL> SELECT ROUND(100.4) FROM dual;
+
+ROUND(100.4)
+------------
+         100
+
+1 row selected.
+
+SQL> SELECT GREATEST(100.4, 23,4,5,6,8,243) FROM dual;
+
+GREATEST(100.4,23,4,5,6,8,243)
+------------------------------
+                           243
+
+1 row selected.
+
+SQL> SELECT LEAST(100.4, 23,4,5,6,8,243) FROM dual;
+
+LEAST(100.4,23,4,5,6,8,243)
+---------------------------
+                          4
+
+1 row selected.
+
+SQL> SELECT sname, CEIL(cgpa) FROM students;
+
+SNAME                          CEIL(CGPA)
+------------------------------ ----------
+VIVEK                                  10
+APARNA                                 10
+MUNEEB                                 10
+SRIRAM                                 10
+LOKESH                                 10
+RAJESH                                  8
+RAVINDER                                7
+AVINASH                                 7
+MADHAN                                 10
+PRUTHVI                                10
+                                       10
+
+SNAME                          CEIL(CGPA)
+------------------------------ ----------
+SUNDAR                                 10
+THANVI                                 10
+GAJANAN                                10
+POOJA                                  10
+POOJA                                  10
+
+16 rows selected.
+
+SQL> SELECT UPPER('Aasaithambi Jay') FROM dual;
+
+UPPER('AASAITHA
+---------------
+AASAITHAMBI JAY
+
+1 row selected.
+
+SQL> SELECT lower('Aasaithambi Jay') FROM dual;
+
+LOWER('AASAITHA
+---------------
+aasaithambi jay
+
+1 row selected.
+
+SQL> SELECT INITCAP('THIS IS TESTING') FROM dual;
+
+INITCAP('THISIS
+---------------
+This Is Testing
+
+1 row selected.
+
+SQL> SELECT LENGTH('AASAITHAMBI JAY') FROM dual;
+
+LENGTH('AASAITHAMBIJAY')
+------------------------
+                      15
+
+1 row selected.
+
+SQL> SELECT * FROM students WHERE LENGTH(sname) <= 5;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 VIVEK                          M         10 10-JAN-25          2
+       113 POOJA                          F        9.8 10-JAN-25
+       114 POOJA                          F        9.8 10-JAN-25
+
+3 rows selected.
+
+SQL> UPDATE students SET sname = INITCAP(sname);
+
+16 rows updated.
+
+SQL> SELECT * FROM students;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 Vivek                          M         10 10-JAN-25          2
+       102 Aparna                         F         10 10-APR-24          1
+       103 Muneeb                         M         10 10-JAN-25          3
+       104 Sriram                         M         10 10-MAR-25          2
+       105 Lokesh                         M         10 01-FEB-25          3
+       106 Rajesh                         M        7.9 10-JUL-25          3
+       107 Ravinder                       M        6.5 10-DEC-25          3
+       108 Avinash                        M        6.9 10-OCT-25          2
+       109 Madhan                         M         10 10-OCT-24          2
+       110 Pruthvi                        M         10 10-OCT-24          2
+       111                                M         10 10-OCT-24          2
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       109 Sundar                         M        9.9 10-JAN-24
+       111 Thanvi                         F        9.5 10-JAN-25          1
+       112 Gajanan                        M        9.1 10-JAN-25          1
+       113 Pooja                          F        9.8 10-JAN-25
+       114 Pooja                          F        9.8 10-JAN-25
+
+16 rows selected.
+
+SQL> SELECT * FROM students WHERE sname LIKE '%E%' OR sname LIKE '%e%';
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 Vivek                          M         10 10-JAN-25          2
+       103 Muneeb                         M         10 10-JAN-25          3
+       105 Lokesh                         M         10 01-FEB-25          3
+       106 Rajesh                         M        7.9 10-JUL-25          3
+       107 Ravinder                       M        6.5 10-DEC-25          3
+
+5 rows selected.
+
+SQL> SELECT * FROM students WHERE upper(sname) LIKE '%E%';
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 Vivek                          M         10 10-JAN-25          2
+       103 Muneeb                         M         10 10-JAN-25          3
+       105 Lokesh                         M         10 01-FEB-25          3
+       106 Rajesh                         M        7.9 10-JUL-25          3
+       107 Ravinder                       M        6.5 10-DEC-25          3
+
+5 rows selected.
+
+SQL> SELECT INSTR('THIS IS TESTING', 'IS') FROM dual;
+
+INSTR('THISISTESTING','IS')
+---------------------------
+                          3
+
+1 row selected.
+
+SQL> SELECT INSTR('THIS IS TESTING', 'ISi') FROM dual;
+
+INSTR('THISISTESTING','ISI')
+----------------------------
+                           0
+
+1 row selected.
+
+SQL> SELECT SUBSTR(sname, 1, 3) FROM students;
+
+SUBSTR(SNAME
+------------
+Viv
+Apa
+Mun
+Sri
+Lok
+Raj
+Rav
+Avi
+Mad
+Pru
+
+
+SUBSTR(SNAME
+------------
+Sun
+Tha
+Gaj
+Poo
+Poo
+
+16 rows selected.
+
+SQL> SELECT SUBSTR(sname, 2, 3) FROM students;
+
+SUBSTR(SNAME
+------------
+ive
+par
+une
+rir
+oke
+aje
+avi
+vin
+adh
+rut
+
+
+SUBSTR(SNAME
+------------
+und
+han
+aja
+ooj
+ooj
+
+16 rows selected.
+
+SQL> SELECT * FROM students WHERE UPPER(SUBSTR(sname, 2,3)) = 'AVI';
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       107 Ravinder                       M        6.5 10-DEC-25          3
+
+1 row selected.
+
+SQL> SELECT * FROM students WHERE UPPER(sname) LIKE '_AVI%';
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       107 Ravinder                       M        6.5 10-DEC-25          3
+
+1 row selected.
+
+SQL> SELECT SYSDATE FROM dual;
+
+SYSDATE
+---------
+15-JUL-25
+
+1 row selected.
+
+SQL> SELECT ADD_MONTHS(SYSDATE, 24) FROM dual;
+
+ADD_MONTH
+---------
+15-JUL-27
+
+1 row selected.
+
+SQL> SELECT ADD_MONTHS(SYSDATE, 4) FROM dual;
+
+ADD_MONTH
+---------
+15-NOV-25
+
+1 row selected.
+
+SQL> SELECT LAST_DAY(SYSDATE) FROM dual;
+
+LAST_DAY(
+---------
+31-JUL-25
+
+1 row selected.
+
+SQL> SELECT LAST_DAY('01-FEB-2025') FROM dual;
+
+LAST_DAY(
+---------
+28-FEB-25
+
+1 row selected.
+
+SQL> SELECT NEXT_DAY(SYSDATE, 'TUESDAY') FROM dual;
+
+NEXT_DAY(
+---------
+22-JUL-25
+
+1 row selected.
+
+SQL> SELECT NEXT_DAY('21-JUL-2025', 'MONDAY') FROM dual;
+
+NEXT_DAY(
+---------
+28-JUL-25
+
+1 row selected.
+
+SQL> SELECT MONTHS_BETWEEN(SYSDATE, '24-NOV-2025') FROM dual;
+
+MONTHS_BETWEEN(SYSDATE,'24-NOV-2025')
+-------------------------------------
+                           -4.2756007
+
+1 row selected.
+
+SQL> SELECT MONTHS_BETWEEN(SYSDATE, '24-NOV-2004') FROM dual;
+
+MONTHS_BETWEEN(SYSDATE,'24-NOV-2004')
+-------------------------------------
+                           247.724408
+
+1 row selected.
+
+SQL> SELECT MONTHS_BETWEEN(SYSDATE, '24-NOV-2004')/12 FROM dual;
+
+MONTHS_BETWEEN(SYSDATE,'24-NOV-2004')/12
+----------------------------------------
+                              20.6437014
+
+1 row selected.
+
+SQL> SELECT ROUND(MONTHS_BETWEEN(SYSDATE, '24-NOV-2004')/12) FROM dual;
+
+ROUND(MONTHS_BETWEEN(SYSDATE,'24-NOV-2004')/12)
+-----------------------------------------------
+                                             21
+
+1 row selected.
+
+SQL> SELECT FLOOR(MONTHS_BETWEEN(SYSDATE, '24-NOV-2004')/12) FROM dual;
+
+FLOOR(MONTHS_BETWEEN(SYSDATE,'24-NOV-2004')/12)
+-----------------------------------------------
+                                             20
+
+1 row selected.
+
+SQL> SELECT TO_DATE('24-NOV-2004') FROM DUAL;
+
+TO_DATE('
+---------
+24-NOV-04
+
+1 row selected.
+
+SQL> SELECT TO_CHAR(10) + TO_CHAR(20) FROM dual;
+
+TO_CHAR(10)+TO_CHAR(20)
+-----------------------
+                     30
+
+1 row selected.
+
+SQL> SELECT TO_CHAR(10) || TO_CHAR(20) FROM dual;
+
+TO_C
+----
+1020
+
+1 row selected.
+
+SQL> SELECT 10 || 20 FROM dual;
+
+10||
+----
+1020
+
+1 row selected.
+
+SQL> SELECT * FROM students;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 Vivek                          M         10 10-JAN-25          2
+       102 Aparna                         F         10 10-APR-24          1
+       103 Muneeb                         M         10 10-JAN-25          3
+       104 Sriram                         M         10 10-MAR-25          2
+       105 Lokesh                         M         10 01-FEB-25          3
+       106 Rajesh                         M        7.9 10-JUL-25          3
+       107 Ravinder                       M        6.5 10-DEC-25          3
+       108 Avinash                        M        6.9 10-OCT-25          2
+       109 Madhan                         M         10 10-OCT-24          2
+       110 Pruthvi                        M         10 10-OCT-24          2
+       111                                M         10 10-OCT-24          2
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       109 Sundar                         M        9.9 10-JAN-24
+       111 Thanvi                         F        9.5 10-JAN-25          1
+       112 Gajanan                        M        9.1 10-JAN-25          1
+       113 Pooja                          F        9.8 10-JAN-25
+       114 Pooja                          F        9.8 10-JAN-25
+
+16 rows selected.
+
+SQL> SELECT sname, TO_CHAR(doj, 'dd/mm/yy') FROM students;
+
+SNAME                          TO_CHAR(
+------------------------------ --------
+Vivek                          10/01/25
+Aparna                         10/04/24
+Muneeb                         10/01/25
+Sriram                         10/03/25
+Lokesh                         01/02/25
+Rajesh                         10/07/25
+Ravinder                       10/12/25
+Avinash                        10/10/25
+Madhan                         10/10/24
+Pruthvi                        10/10/24
+                               10/10/24
+
+SNAME                          TO_CHAR(
+------------------------------ --------
+Sundar                         10/01/24
+Thanvi                         10/01/25
+Gajanan                        10/01/25
+Pooja                          10/01/25
+Pooja                          10/01/25
+
+16 rows selected.
+
+SQL> SELECT sname, TO_CHAR(doj, 'DDD/mm/yy') FROM students;
+
+SNAME                          TO_CHAR(D
+------------------------------ ---------
+Vivek                          010/01/25
+Aparna                         101/04/24
+Muneeb                         010/01/25
+Sriram                         069/03/25
+Lokesh                         032/02/25
+Rajesh                         191/07/25
+Ravinder                       344/12/25
+Avinash                        283/10/25
+Madhan                         284/10/24
+Pruthvi                        284/10/24
+                               284/10/24
+
+SNAME                          TO_CHAR(D
+------------------------------ ---------
+Sundar                         010/01/24
+Thanvi                         010/01/25
+Gajanan                        010/01/25
+Pooja                          010/01/25
+Pooja                          010/01/25
+
+16 rows selected.
+
+SQL> SELECT sname, TO_CHAR(doj, 'DAY/mm/yy') FROM students;
+
+SNAME                          TO_CHAR(DOJ,'DAY/MM/YY')
+------------------------------ ------------------------------------------
+Vivek                          FRIDAY   /01/25
+Aparna                         WEDNESDAY/04/24
+Muneeb                         FRIDAY   /01/25
+Sriram                         MONDAY   /03/25
+Lokesh                         SATURDAY /02/25
+Rajesh                         THURSDAY /07/25
+Ravinder                       WEDNESDAY/12/25
+Avinash                        FRIDAY   /10/25
+Madhan                         THURSDAY /10/24
+Pruthvi                        THURSDAY /10/24
+                               THURSDAY /10/24
+
+SNAME                          TO_CHAR(DOJ,'DAY/MM/YY')
+------------------------------ ------------------------------------------
+Sundar                         WEDNESDAY/01/24
+Thanvi                         FRIDAY   /01/25
+Gajanan                        FRIDAY   /01/25
+Pooja                          FRIDAY   /01/25
+Pooja                          FRIDAY   /01/25
+
+16 rows selected.
+
+SQL> SELECT TO_CHAR(SYSDATE, 'DAY, dd MONTH, YYYY') FROM dual;
+
+TO_CHAR(SYSDATE,'DAY,DDMONTH,YYYY')
+--------------------------------------------------------------------------------
+TUESDAY  , 15 JULY     , 2025
+
+1 row selected.
+
+SQL> SELECT MAX(cgpa), MIN(cgpa), COUNT(*) FROM students;
+
+ MAX(CGPA)  MIN(CGPA)   COUNT(*)
+---------- ---------- ----------
+        10        6.5         16
+
+1 row selected.
+
+SQL> SELE * FROM students;
+SP2-0734: unknown command beginning "SELE * FRO..." - rest of line ignored.
+SQL> SELECT * FROM students;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 Vivek                          M         10 10-JAN-25          2
+       102 Aparna                         F         10 10-APR-24          1
+       103 Muneeb                         M         10 10-JAN-25          3
+       104 Sriram                         M         10 10-MAR-25          2
+       105 Lokesh                         M         10 01-FEB-25          3
+       106 Rajesh                         M        7.9 10-JUL-25          3
+       107 Ravinder                       M        6.5 10-DEC-25          3
+       108 Avinash                        M        6.9 10-OCT-25          2
+       109 Madhan                         M         10 10-OCT-24          2
+       110 Pruthvi                        M         10 10-OCT-24          2
+       111                                M         10 10-OCT-24          2
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       109 Sundar                         M        9.9 10-JAN-24
+       111 Thanvi                         F        9.5 10-JAN-25          1
+       112 Gajanan                        M        9.1 10-JAN-25          1
+       113 Pooja                          F        9.8 10-JAN-25
+       114 Pooja                          F        9.8 10-JAN-25
+
+16 rows selected.
+
+SQL> SELECT MAX(cgpa), MIN(cgpa), COUNT(*) FROM students GROUP BY dept;
+
+ MAX(CGPA)  MIN(CGPA)   COUNT(*)
+---------- ---------- ----------
+        10        9.1          3
+        10        6.9          6
+       9.9        9.8          3
+        10        6.5          4
+
+4 rows selected.
+
+SQL> SELECT dept,MAX(cgpa), MIN(cgpa), COUNT(*) FROM students GROUP BY dept;
+
+      DEPT  MAX(CGPA)  MIN(CGPA)   COUNT(*)
+---------- ---------- ---------- ----------
+         1         10        9.1          3
+         2         10        6.9          6
+                  9.9        9.8          3
+         3         10        6.5          4
+
+4 rows selected.
+
+SQL> SELECT dept,sname,MAX(cgpa), MIN(cgpa), COUNT(*) FROM students GROUP BY dept;
+SELECT dept,sname,MAX(cgpa), MIN(cgpa), COUNT(*) FROM students GROUP BY dept
+            *
+ERROR at line 1:
+ORA-00979: not a GROUP BY expression
+
+
+SQL> SELECT dept,MAX(cgpa), MIN(cgpa), COUNT(*) FROM students GROUP BY dept
+  2  HAVING COUNT(dept) > 3;
+
+      DEPT  MAX(CGPA)  MIN(CGPA)   COUNT(*)
+---------- ---------- ---------- ----------
+         2         10        6.9          6
+         3         10        6.5          4
+
+2 rows selected.
+
+SQL> SELECT * FROM students;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 Vivek                          M         10 10-JAN-25          2
+       102 Aparna                         F         10 10-APR-24          1
+       103 Muneeb                         M         10 10-JAN-25          3
+       104 Sriram                         M         10 10-MAR-25          2
+       105 Lokesh                         M         10 01-FEB-25          3
+       106 Rajesh                         M        7.9 10-JUL-25          3
+       107 Ravinder                       M        6.5 10-DEC-25          3
+       108 Avinash                        M        6.9 10-OCT-25          2
+       109 Madhan                         M         10 10-OCT-24          2
+       110 Pruthvi                        M         10 10-OCT-24          2
+       111                                M         10 10-OCT-24          2
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       109 Sundar                         M        9.9 10-JAN-24
+       111 Thanvi                         F        9.5 10-JAN-25          1
+       112 Gajanan                        M        9.1 10-JAN-25          1
+       113 Pooja                          F        9.8 10-JAN-25
+       114 Pooja                          F        9.8 10-JAN-25
+
+16 rows selected.
+
+SQL> SELECT * FROM students ORDER BY sname;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       102 Aparna                         F         10 10-APR-24          1
+       108 Avinash                        M        6.9 10-OCT-25          2
+       112 Gajanan                        M        9.1 10-JAN-25          1
+       105 Lokesh                         M         10 01-FEB-25          3
+       109 Madhan                         M         10 10-OCT-24          2
+       103 Muneeb                         M         10 10-JAN-25          3
+       113 Pooja                          F        9.8 10-JAN-25
+       114 Pooja                          F        9.8 10-JAN-25
+       110 Pruthvi                        M         10 10-OCT-24          2
+       106 Rajesh                         M        7.9 10-JUL-25          3
+       107 Ravinder                       M        6.5 10-DEC-25          3
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       104 Sriram                         M         10 10-MAR-25          2
+       109 Sundar                         M        9.9 10-JAN-24
+       111 Thanvi                         F        9.5 10-JAN-25          1
+       101 Vivek                          M         10 10-JAN-25          2
+       111                                M         10 10-OCT-24          2
+
+16 rows selected.
+
+SQL> SELECT * FROM students ORDER BY cgpa;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       107 Ravinder                       M        6.5 10-DEC-25          3
+       108 Avinash                        M        6.9 10-OCT-25          2
+       106 Rajesh                         M        7.9 10-JUL-25          3
+       112 Gajanan                        M        9.1 10-JAN-25          1
+       111 Thanvi                         F        9.5 10-JAN-25          1
+       113 Pooja                          F        9.8 10-JAN-25
+       114 Pooja                          F        9.8 10-JAN-25
+       109 Sundar                         M        9.9 10-JAN-24
+       109 Madhan                         M         10 10-OCT-24          2
+       110 Pruthvi                        M         10 10-OCT-24          2
+       111                                M         10 10-OCT-24          2
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       105 Lokesh                         M         10 01-FEB-25          3
+       102 Aparna                         F         10 10-APR-24          1
+       101 Vivek                          M         10 10-JAN-25          2
+       104 Sriram                         M         10 10-MAR-25          2
+       103 Muneeb                         M         10 10-JAN-25          3
+
+16 rows selected.
+
+SQL> SELECT * FROM students ORDER BY cgpa DESC;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       101 Vivek                          M         10 10-JAN-25          2
+       102 Aparna                         F         10 10-APR-24          1
+       103 Muneeb                         M         10 10-JAN-25          3
+       104 Sriram                         M         10 10-MAR-25          2
+       109 Madhan                         M         10 10-OCT-24          2
+       105 Lokesh                         M         10 01-FEB-25          3
+       111                                M         10 10-OCT-24          2
+       110 Pruthvi                        M         10 10-OCT-24          2
+       109 Sundar                         M        9.9 10-JAN-24
+       113 Pooja                          F        9.8 10-JAN-25
+       114 Pooja                          F        9.8 10-JAN-25
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       111 Thanvi                         F        9.5 10-JAN-25          1
+       112 Gajanan                        M        9.1 10-JAN-25          1
+       106 Rajesh                         M        7.9 10-JUL-25          3
+       108 Avinash                        M        6.9 10-OCT-25          2
+       107 Ravinder                       M        6.5 10-DEC-25          3
+
+16 rows selected.
+
+SQL> SELECT * FROM students ORDER BY cgpa DESC, sname, sid DESC;
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       102 Aparna                         F         10 10-APR-24          1
+       105 Lokesh                         M         10 01-FEB-25          3
+       109 Madhan                         M         10 10-OCT-24          2
+       103 Muneeb                         M         10 10-JAN-25          3
+       110 Pruthvi                        M         10 10-OCT-24          2
+       104 Sriram                         M         10 10-MAR-25          2
+       101 Vivek                          M         10 10-JAN-25          2
+       111                                M         10 10-OCT-24          2
+       109 Sundar                         M        9.9 10-JAN-24
+       114 Pooja                          F        9.8 10-JAN-25
+       113 Pooja                          F        9.8 10-JAN-25
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       111 Thanvi                         F        9.5 10-JAN-25          1
+       112 Gajanan                        M        9.1 10-JAN-25          1
+       106 Rajesh                         M        7.9 10-JUL-25          3
+       108 Avinash                        M        6.9 10-OCT-25          2
+       107 Ravinder                       M        6.5 10-DEC-25          3
+
+16 rows selected.
+
+SQL> SELECT MAX(cgpa) FROM students WHERE cgpa <
+  2  SELECT MAX(cgpa) FROM students;
+SELECT MAX(cgpa) FROM students
+*
+ERROR at line 2:
+ORA-00936: missing expression
+
+
+SQL> edit
+Wrote file afiedt.buf
+
+  1  SELECT MAX(cgpa) FROM students WHERE cgpa <
+  2* (SELECT MAX(cgpa) FROM students)
+SQL> /
+
+ MAX(CGPA)
+----------
+       9.9
+
+1 row selected.
+
+SQL> edit
+Wrote file afiedt.buf
+
+  1  SELECT * FROM students where cgpa = (SELECT MAX(cgpa) FROM students WHERE cgpa <
+  2* (SELECT MAX(cgpa) FROM students))
+SQL> /
+
+       SID SNAME                          G       CGPA DOJ             DEPT
+---------- ------------------------------ - ---------- --------- ----------
+       109 Sundar                         M        9.9 10-JAN-24
+
+1 row selected.
+
+SQL> SELECT sid, sname, cgpa, DENSE_RANK() OVER (ORDER BY cgpa DESC) as ranks
+  2  FROM students ORDER BY ranks;
+
+       SID SNAME                                CGPA      RANKS
+---------- ------------------------------ ---------- ----------
+       101 Vivek                                  10          1
+       102 Aparna                                 10          1
+       103 Muneeb                                 10          1
+       104 Sriram                                 10          1
+       109 Madhan                                 10          1
+       105 Lokesh                                 10          1
+       111                                        10          1
+       110 Pruthvi                                10          1
+       109 Sundar                                9.9          2
+       113 Pooja                                 9.8          3
+       114 Pooja                                 9.8          3
+
+       SID SNAME                                CGPA      RANKS
+---------- ------------------------------ ---------- ----------
+       111 Thanvi                                9.5          4
+       112 Gajanan                               9.1          5
+       106 Rajesh                                7.9          6
+       108 Avinash                               6.9          7
+       107 Ravinder                              6.5          8
+
+16 rows selected.
+
+SQL> SELECT dept, sid, sname, cgpa, DENSE_RANK() OVER (PARTITION BY dept ORDER BY cgpa DESC) as ranks
+  2  FROM students ORDER BY dept, ranks;
+
+      DEPT        SID SNAME                                CGPA      RANKS
+---------- ---------- ------------------------------ ---------- ----------
+         1        102 Aparna                                 10          1
+         1        111 Thanvi                                9.5          2
+         1        112 Gajanan                               9.1          3
+         2        101 Vivek                                  10          1
+         2        104 Sriram                                 10          1
+         2        111                                        10          1
+         2        110 Pruthvi                                10          1
+         2        109 Madhan                                 10          1
+         2        108 Avinash                               6.9          2
+         3        105 Lokesh                                 10          1
+         3        103 Muneeb                                 10          1
+
+      DEPT        SID SNAME                                CGPA      RANKS
+---------- ---------- ------------------------------ ---------- ----------
+         3        106 Rajesh                                7.9          2
+         3        107 Ravinder                              6.5          3
+                  109 Sundar                                9.9          1
+                  113 Pooja                                 9.8          2
+                  114 Pooja                                 9.8          2
+
+16 rows selected.
+
+SQL>
